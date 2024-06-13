@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20741F042C1B7DA5006B15A2 /* LandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20741F032C1B7DA5006B15A2 /* LandingPageView.swift */; };
 		20F762012B90F20300063F0E /* PocketVerterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F762002B90F20300063F0E /* PocketVerterApp.swift */; };
 		20F762032B90F20300063F0E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F762022B90F20300063F0E /* ContentView.swift */; };
 		20F762052B90F20500063F0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20F762042B90F20500063F0E /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20741F032C1B7DA5006B15A2 /* LandingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageView.swift; sourceTree = "<group>"; };
 		20F761FD2B90F20300063F0E /* PocketVerter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketVerter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F762002B90F20300063F0E /* PocketVerterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketVerterApp.swift; sourceTree = "<group>"; };
 		20F762022B90F20300063F0E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,8 +53,9 @@
 		20F761FF2B90F20300063F0E /* PocketVerter */ = {
 			isa = PBXGroup;
 			children = (
-				20F762002B90F20300063F0E /* PocketVerterApp.swift */,
 				20F762022B90F20300063F0E /* ContentView.swift */,
+				20741F032C1B7DA5006B15A2 /* LandingPageView.swift */,
+				20F762002B90F20300063F0E /* PocketVerterApp.swift */,
 				20F762042B90F20500063F0E /* Assets.xcassets */,
 				20F762062B90F20500063F0E /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20F762032B90F20300063F0E /* ContentView.swift in Sources */,
+				20741F042C1B7DA5006B15A2 /* LandingPageView.swift in Sources */,
 				20F762012B90F20300063F0E /* PocketVerterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
