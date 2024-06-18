@@ -4,12 +4,32 @@
 //
 //  Created by Samuel Hernandez Vicera on 6/13/24.
 //
-
 import SwiftUI
 
 struct EditPreferencesView: View {
+    @State private var allConversionTypes: [String] = ["Temperature", "Time", "Money", "Distance"]
+    @State private var searchText = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            List {
+                Section(header: Text("Starred Conversions")) {
+                    ForEach(allConversionTypes, id: \.self) { conversion in
+                        Text(conversion)
+                    }
+                }
+                
+                Section(header: Text("Other Conversions")) {
+                    ForEach(allConversionTypes.filter { searchText.isEmpty ? true : $0.localizedCaseInsensitiveContains(searchText) }, id: \.self) { conversion in
+                        Text(conversion)
+                    }
+                }
+            }
+            .searchable(text: $searchText, placement: .sidebar)
+            .listStyle(InsetGroupedListStyle())
+            .navigationTitle("Starred Conversions")
+            .navigationBarTitleDisplayMode(.automatic)
+        }
     }
 }
 
