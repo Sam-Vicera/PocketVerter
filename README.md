@@ -5,7 +5,7 @@ This was one of the first few projects I worked on when learning Swift while I w
 
 Below is an image of a working app that fufilled the critera the project had to meet.
 
-![image](initialPocketVerter.png)
+![image](PocketVerter/ReadMe.docc/Resources/InitialPocketVerter.png)
 
 
 
