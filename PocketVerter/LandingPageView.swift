@@ -8,49 +8,56 @@
 import SwiftUI
 
 struct LandingPageView: View {
+    @State private var showingSearchBar = false
+    
     var body: some View {
         NavigationStack {
-            VStack{
-                
-                
-                VStack(alignment: .center ,spacing: 65){
-                    Text("PocketVerter")
-                        .foregroundStyle(.white)
-                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                    
-                    Image("Delta")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 100, height: 100)
-                        .background(Color.gray)
-                }
-                Spacer()
-                
-                VStack(spacing: 35){
-                    
-             
-                    NavigationLink(destination: ContentView()) {
-                        CustomButtonView(label: "Quick Access / Starred")
-                    }
-                    NavigationLink(destination: ContentView()) {
-                        CustomButtonView(label: "Time Conversions")
-                    }
-                    NavigationLink(destination: ContentView()) {
-                        CustomButtonView(label: "Temperature Conversions")
-                    }
-                    NavigationLink(destination: ContentView()) {
-                        CustomButtonView(label: "Distance Conversions")
-                    }
+            ZStack {
+                VStack{
                     
                     
-                   
+                    VStack(alignment: .center ,spacing: 65){
+                        Text("PocketVerter")
+                            .foregroundStyle(.white)
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        
+                        Image("Delta")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 100, height: 100)
+                            .background(Color.gray)
+                    }
+                    Spacer()
+                    
+                    VStack(spacing: 35){
+                        
+                        
+                        NavigationLink(destination: ContentView()) {
+                            CustomButtonView(label: "Quick Access / Starred")
                         }
+                        NavigationLink(destination: ContentView()) {
+                            CustomButtonView(label: "Time Conversions")
+                        }
+                        NavigationLink(destination: ContentView()) {
+                            CustomButtonView(label: "Temperature Conversions")
+                        }
+                        NavigationLink(destination: ContentView()) {
+                            CustomButtonView(label: "Distance Conversions")
+                        }
+                        
+                        
+                        
+                    }
+                    
+                    Spacer()
+                }
+                .frame(minWidth: 450)
+                .background(.darkBackground)
                 
-                Spacer()
+                SideMenuView(isShowing: $showingSearchBar)
+                
             }
-            .frame(minWidth: 500, minHeight: 500)
-            .background(.darkBackground)
-            
+            .toolbar(showingSearchBar ? .hidden : .visible, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     NavigationLink(destination: EditPreferencesView()) {
@@ -58,8 +65,10 @@ struct LandingPageView: View {
                     }
                 }
                 ToolbarItem(placement: .topBarLeading) {
-                    NavigationLink(destination: EditPreferencesView()) {
-                        Label("Edit user preferences", systemImage: "magnifyingglass")
+                    Button() {
+                        showingSearchBar.toggle()
+                    } label: {
+                        Image(systemName: "magnifyingglass")
                     }
                 }
             }

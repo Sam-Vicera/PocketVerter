@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct EditPreferencesView: View {
-    @State private var allConversionTypes: [String] = ["Temperature", "Time", "Money", "Distance"]
+    @State private var allConversionTypes: [String] = ["Temperature", "Time", "Money", "Distance", "Weight", "Height"]
     
     @State private var starredConversionTypes: [String] = []
     @State private var searchText = ""
@@ -54,6 +54,8 @@ struct EditPreferencesView: View {
             .navigationBarTitleDisplayMode(.automatic)
         }
     }
+    
+    // function allows a user to make conversions starred in order for quicker access in another view
     private func toggleStar(for conversion: String) {
         if let index = starredConversionTypes.firstIndex(of: conversion) {
             starredConversionTypes.remove(at: index)
