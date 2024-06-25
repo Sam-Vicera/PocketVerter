@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		200B3C2A2C2B2C0F00D02D3E /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B3C292C2B2C0F00D02D3E /* SideMenuView.swift */; };
+		200B3C2C2C2B401300D02D3E /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B3C2B2C2B401300D02D3E /* SearchBarView.swift */; };
 		20741F042C1B7DA5006B15A2 /* LandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20741F032C1B7DA5006B15A2 /* LandingPageView.swift */; };
 		20741F062C1B8FAF006B15A2 /* EditPreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20741F052C1B8FAF006B15A2 /* EditPreferencesView.swift */; };
 		20F762012B90F20300063F0E /* PocketVerterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F762002B90F20300063F0E /* PocketVerterApp.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		200B3C292C2B2C0F00D02D3E /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		200B3C2B2C2B401300D02D3E /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		20741F032C1B7DA5006B15A2 /* LandingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageView.swift; sourceTree = "<group>"; };
 		20741F052C1B8FAF006B15A2 /* EditPreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPreferencesView.swift; sourceTree = "<group>"; };
 		20F761FD2B90F20300063F0E /* PocketVerter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketVerter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +66,7 @@
 				20F762002B90F20300063F0E /* PocketVerterApp.swift */,
 				20F762042B90F20500063F0E /* Assets.xcassets */,
 				20F762062B90F20500063F0E /* Preview Content */,
+				200B3C2B2C2B401300D02D3E /* SearchBarView.swift */,
 			);
 			path = PocketVerter;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				20741F042C1B7DA5006B15A2 /* LandingPageView.swift in Sources */,
 				200B3C2A2C2B2C0F00D02D3E /* SideMenuView.swift in Sources */,
 				20F762012B90F20300063F0E /* PocketVerterApp.swift in Sources */,
+				200B3C2C2C2B401300D02D3E /* SearchBarView.swift in Sources */,
 				20741F062C1B8FAF006B15A2 /* EditPreferencesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

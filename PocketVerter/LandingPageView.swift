@@ -10,6 +10,7 @@ import SwiftUI
 struct LandingPageView: View {
     @State private var showingSearchBar = false
     
+    
     var body: some View {
         NavigationStack {
             ZStack {
