@@ -28,11 +28,11 @@ struct SideMenuView: View {
                             .foregroundStyle(.white)
                             .padding()
                         
-                        SearchBarView()
+                        SearchBarView(searchText: $searchText)
                             .padding()
                         
                         List {
-                            ForEach(allConversionTypes, id: \.self) {conversion in
+                            ForEach(allConversionTypes.filter { searchText.isEmpty ? true : $0.localizedCaseInsensitiveContains(searchText) }, id: \.self) { conversion in
                                 Text(conversion)
                                     .foregroundStyle(.white)
                                     .listRowBackground(Color.darkBackground)

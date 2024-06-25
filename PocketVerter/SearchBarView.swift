@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SearchBarView: View {
-    @State private var searchText: String = ""
+    @Binding var searchText: String
     var body: some View {
         HStack {
             Image(systemName: "magnifyingglass")
@@ -31,5 +31,5 @@ struct SearchBarView: View {
 }
 
 #Preview {
-    SearchBarView()
+    SearchBarView(searchText: .constant("Preview Testing"))
 }
